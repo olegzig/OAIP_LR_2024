@@ -28,7 +28,28 @@ const char* strImitate(const char* str1, const char* str2) {
     return(NULL);
 }
 
+char string1[255];
+char string2[255];
+
+void inputChar() {
+    std::cout << "Input first str: ";
+    std::cin >> string1;
+    std::cout << "Input second str: ";
+    std::cin >> string2;
+}
+
+void print() {
+    std::cout << "First str: " << string1 << "\n";
+    std::cout << "Second str: " << string2 << "\n";
+}
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    inputChar();
+    print();
+    std::cout << "-----------------\n";
+    std::cout<<"result of strstr(): "<< strShell(string1, string2) << "\n";
+    std::cout << "result of imitation: " << strImitate(string1, string2);
+
+    std::cin;
 }
